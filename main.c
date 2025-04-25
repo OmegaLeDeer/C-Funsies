@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() { 
+char *textParser(char *text);
+
+int main() {
 
     char name[50];
 
@@ -9,7 +11,24 @@ int main() {
 
     fgets(name, sizeof(name), stdin);
 
-    printf("Welcome, %s.", name);
+    printf("Welcome, %s.\n", name);
+
+    printf("%s",textParser(name));
 
     return 0;
+
+}
+
+char *textParser(char *text) {
+
+    if(text == NULL){
+
+        return NULL;
+
+    }
+
+    
+
+    return text;
+
 }
